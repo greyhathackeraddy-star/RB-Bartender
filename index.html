@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RB BAR | Bartender Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* Navbar */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 25px;
+
+    background:rgba(15,23,42,.95);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#fbbf24;
+}
+
+.nav-links{
+    display:flex;
+    gap:10px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    padding:10px 16px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:#fbbf24;
+    color:black;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:80px 20px 50px;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#fbbf24;
+}
+
+.hero p{
+    margin-top:12px;
+    color:#dbe4f1;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    background:#fbbf24;
+    color:black;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+/* Dashboard */
+
+.dashboard{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.stat-card h2{
+    color:#fbbf24;
+    font-size:34px;
+}
+
+.stat-card p{
+    margin-top:8px;
+    color:#dbe4f1;
+}
+
+/* Quick Access */
+
+.cards{
+    max-width:1100px;
+    margin:20px auto 60px;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    text-decoration:none;
+    color:white;
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border:1px solid #fbbf24;
+}
+
+.card h3{
+    color:#fbbf24;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#dbe4f1;
+}
+
+/* Passion */
+
+.passion{
+    max-width:1100px;
+    margin:20px auto 60px;
+    padding:30px;
+    background:#1e293b;
+    border-radius:18px;
+    text-align:center;
+}
+
+.passion h2{
+    color:#fbbf24;
+    margin-bottom:15px;
+}
+
+.passion p{
+    color:#dbe4f1;
+    line-height:1.8;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#dbe4f1;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+}
+
+@media(max-width:500px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+RB BAR
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="mybar.html">MyBar</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>🍸 Ranjit Biswas</h1>
+
+<p>
+Bartender • Mixology Enthusiast • Hospitality Professional
+</p>
+
+<a href="about.html" class="btn">
+View Profile
+</a>
+
+</section>
+
+<section class="dashboard">
+
+<div class="stat-card">
+<h2>6+</h2>
+<p>Months Experience</p>
+</div>
+
+<div class="stat-card">
+<h2>50+</h2>
+<p>Cocktails Learned</p>
+</div>
+
+<div class="stat-card">
+<h2>100%</h2>
+<p>Guest Focus</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Learning Mindset</p>
+</div>
+
+</section>
+
+<section class="cards">
+
+<a href="about.html" class="card">
+<h3>👤 About Me</h3>
+<p>Learn about my bartender journey and experience.</p>
+</a>
+
+<a href="contact.html" class="card">
+<h3>📞 Contact</h3>
+<p>Get in touch for opportunities and networking.</p>
+</a>
+
+<a href="mybar.html" class="card">
+<h3>🍸 MyBar</h3>
+<p>Classic cocktails, mocktails, spirits and more.</p>
+</a>
+
+<a href="notes.html" class="card">
+<h3>📝 Notes</h3>
+<p>Personal bartender notes and learning resources.</p>
+</a>
+
+</section>
+
+<section class="passion">
+
+<h2>My Passion</h2>
+
+<p>
+I am passionate about bartending, hospitality,
+cocktail creation and continuous learning.
+My goal is to provide excellent guest experiences
+while improving my skills every day.
+</p>
+
+</section>
+
+<footer>
+© 2026 Ranjit Biswas • Bartender Portfolio
+</footer>
+
+</body>
+</html>
