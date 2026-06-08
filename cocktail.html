@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classic Cocktails</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#fbbf24;
+    margin-bottom:30px;
+}
+
+.search-box{
+    max-width:600px;
+    margin:0 auto 30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+}
+
+.grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border:1px solid #fbbf24;
+}
+
+.card a{
+    display:block;
+    padding:20px;
+    text-decoration:none;
+    color:white;
+}
+
+.card h3{
+    color:#fbbf24;
+}
+
+.card p{
+    margin-top:8px;
+    color:#cbd5e1;
+}
+
+</style>
+</head>
+<body>
+
+<h1>🍸 20 Classic Cocktails</h1>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search cocktail...">
+</div>
+
+<div class="grid">
+
+    <div class="card"><a href="mojito.html"><h3>Mojito</h3><p>Cuban Classic</p></a></div>
+
+    <div class="card"><a href="margarita.html"><h3>Margarita</h3><p>Tequila Cocktail</p></a></div>
+
+    <div class="card"><a href="martini.html"><h3>Martini</h3><p>Gin Classic</p></a></div>
+
+    <div class="card"><a href="old-fashioned.html"><h3>Old Fashioned</h3><p>Whiskey Cocktail</p></a></div>
+
+    <div class="card"><a href="negroni.html"><h3>Negroni</h3><p>Italian Classic</p></a></div>
+
+    <div class="card"><a href="daiquiri.html"><h3>Daiquiri</h3><p>Rum Sour</p></a></div>
+
+    <div class="card"><a href="manhattan.html"><h3>Manhattan</h3><p>Whiskey & Vermouth</p></a></div>
+
+    <div class="card"><a href="whiskey-sour.html"><h3>Whiskey Sour</h3><p>Sweet & Sour</p></a></div>
+
+    <div class="card"><a href="cosmopolitan.html"><h3>Cosmopolitan</h3><p>Vodka Cocktail</p></a></div>
+
+    <div class="card"><a href="pina-colada.html"><h3>Pina Colada</h3><p>Tropical Drink</p></a></div>
+
+    <div class="card"><a href="bloody-merry.html"><h3>Bloody Merry</h3><p>Tiki Cocktail</p></a></div>
+
+    <div class="card"><a href="gimlet.html"><h3>Gimlet</h3><p>Brandy Classic</p></a></div>
+
+    <div class="card"><a href="hot-toddy.html"><h3>Hot Toddy</h3><p>Gin Highball</p></a></div>
+
+    <div class="card"><a href="the-paloma.html"><h3>The Paloma</h3><p>Vodka & Ginger</p></a></div>
+
+    <div class="card"><a href="liit.html"><h3>Long Island Iced Tea</h3><p>Multi-Spirit Mix</p></a></div>
+
+    <div class="card"><a href="boulevardier.html"><h3>upcoming</h3><p>Bourbon Negroni</p></a></div>
+
+    <div class="card"><a href="aviation.html"><h3>upcoming</h3><p>Gin Cocktail</p></a></div>
+
+    <div class="card"><a href="singapore-sling.html"><h3>upcoming</h3><p>Singapore Classic</p></a></div>
+
+    <div class="card"><a href="french75.html"><h3>upcoming</h3><p>Gin & Champagne</p></a></div>
+
+    <div class="card"><a href="mint-julep.html"><h3>upcoming</h3><p>Bourbon & Mint</p></a></div>
+
+</div>
+
+<script>
+
+document.getElementById("search").addEventListener("keyup", function(){
+
+    let filter = this.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        let text = card.innerText.toLowerCase();
+
+        card.style.display =
+            text.includes(filter) ? "block" : "none";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
